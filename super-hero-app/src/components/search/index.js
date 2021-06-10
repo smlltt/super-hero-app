@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { IconButton, TextField } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
-const Search = ({ searchHero, getHeroes, error }) => {
-  const checkError = error ? true : false;
+const Search = ({ getHeroes, error }) => {
+  const [hero, setHero] = useState("");
+  const checkError = !!error;
 
   return (
     <div>
@@ -11,14 +12,14 @@ const Search = ({ searchHero, getHeroes, error }) => {
         error={checkError}
         helperText={error}
         placeholder={"your hero"}
-        onChange={searchHero}
+        onChange={(e) => setHero(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
-            getHeroes();
+            getHeroes(hero);
           }
         }}
-      ></TextField>
-      <IconButton onClick={getHeroes}>
+      />
+      <IconButton onClick={() => getHeroes(hero)}>
         <SearchIcon />
       </IconButton>
     </div>

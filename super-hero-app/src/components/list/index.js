@@ -17,7 +17,7 @@ const List = ({ heroes, selectHero, loading }) => {
           <CircularProgress />
         </SpinnerWrapper>
       ) : null}
-      <ListWrapper>{heroesList ? heroesList : null}</ListWrapper>
+      <ListWrapper>{heroesList}</ListWrapper>
     </>
   );
 };

@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`is closed when no hero is selected 1`] = `null`;
+
+exports[`is open when a hero is selected 1`] = `null`;

@@ -62,7 +62,7 @@ const HeroCard = ({ selectedHero, closeSelectedHero }) => {
   return (
     <Card>
       <HeaderWrapper>
-        <CardHeader title={selectedHero.name}></CardHeader>
+        <CardHeader title={selectedHero.name} />
         <IconButton onClick={closeSelectedHero}>
           <CloseIcon />
         </IconButton>

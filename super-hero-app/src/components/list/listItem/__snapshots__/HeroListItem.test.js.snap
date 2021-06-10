@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes arrow to cursor on hover 1`] = `
+<li
+  className="MuiListItem-root sc-gtsrHT bpCfxK MuiListItem-gutters"
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="MuiListItemText-root"
+  >
+    <span
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+    >
+      Batman
+    </span>
+  </div>
+  <div
+    className="MuiListItemAvatar-root"
+  >
+    <div
+      className="MuiAvatar-root MuiAvatar-circle"
+    >
+      <img
+        alt="Batman"
+        className="MuiAvatar-img"
+        src="example.jpg"
+      />
+    </div>
+  </div>
+</li>
+`;

@@ -6,23 +6,18 @@ import HeroModal from "./components/modal";
 const axios = require("axios").default;
 
 function App() {
-  const [searchedHero, setSearchedHero] = useState("");
   const [heroes, setHeroes] = useState([]);
   const [error, setError] = useState("");
   const [selectedHero, setSelectedHero] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const searchHero = (e) => {
-    setSearchedHero(e.target.value);
-  };
-
-  const getHeroes = async () => {
+  const getHeroes = async (hero) => {
     setLoading(true);
     setHeroes([]);
     setError("");
     try {
       const callRes = await axios.get(
-        `https://www.superheroapi.com/api.php/496270201429073/search/${searchedHero}`
+        `https://www.superheroapi.com/api.php/496270201429073/search/${hero}`
       );
       setLoading(false);
       if (callRes.data.response === "success") {
@@ -49,7 +44,7 @@ function App() {
         <TitleTypography variant={"h4"}>
           Look up your favourite super hero:
         </TitleTypography>
-        <Search searchHero={searchHero} getHeroes={getHeroes} error={error} />
+        <Search getHeroes={getHeroes} error={error} />
       </HeaderWrapper>
       <List heroes={heroes} selectHero={selectHero} loading={loading} />
       <HeroModal

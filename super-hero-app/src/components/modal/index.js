@@ -3,7 +3,7 @@ import { CenteredModal, ModalPaper } from "./styles";
 import HeroCard from "./heroCard";
 
 const HeroModal = ({ selectedHero, closeSelectedHero }) => {
-  const open = selectedHero.id ? true : false;
+  const open = !!selectedHero.id;
 
   return (
     <CenteredModal open={open} onClose={() => closeSelectedHero()}>
