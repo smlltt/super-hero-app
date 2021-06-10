@@ -36,11 +36,11 @@ const HeroCard = ({ selectedHero, closeSelectedHero }) => {
     "alignment",
   ];
 
-  const bioFactsList = bioFacts.map((bioFact) => {
+  const bioFactsList = bioFacts.map((bioFact, index) => {
     let capitalizedBioFact = bioFact[0].toUpperCase() + bioFact.slice(1);
     capitalizedBioFact = capitalizedBioFact.replace(/-/g, " ");
     return (
-      <ListItemText>
+      <ListItemText key={index}>
         <StatBioTypography variant={"p"}>
           {capitalizedBioFact}:{" "}
         </StatBioTypography>
@@ -49,10 +49,10 @@ const HeroCard = ({ selectedHero, closeSelectedHero }) => {
     );
   });
 
-  const statsList = stats.map((stat) => {
+  const statsList = stats.map((stat, index) => {
     const capitalizedStat = stat[0].toUpperCase() + stat.slice(1);
     return (
-      <ListItemText>
+      <ListItemText key={index}>
         <StatBioTypography variant={"p"}>{capitalizedStat}: </StatBioTypography>
         {selectedHero.powerstats[stat]}
       </ListItemText>
