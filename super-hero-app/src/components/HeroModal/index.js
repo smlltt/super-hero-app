@@ -1,6 +1,6 @@
 import React from "react";
 import { CenteredModal, ModalPaper } from "./styles";
-import HeroCard from "./heroCard";
+import HeroCard from "./HeroCard";
 
 const HeroModal = ({ selectedHero, closeSelectedHero }) => {
   const open = !!selectedHero.id;

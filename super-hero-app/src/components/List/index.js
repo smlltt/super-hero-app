@@ -1,6 +1,6 @@
 import React from "react";
 import { ListWrapper, SpinnerWrapper } from "./styles";
-import HeroListItem from "./listItem";
+import HeroListItem from "./HeroListItem";
 import { CircularProgress, Divider } from "@material-ui/core";
 
 const List = ({ heroes, selectHero, loading }) => {

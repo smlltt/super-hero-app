@@ -1,8 +1,8 @@
-import Search from "./components/search";
+import Search from "./components/Search";
 import React, { useCallback, useState } from "react";
-import List from "./components/list";
+import List from "./components/List";
 import { ContentWrapper, HeaderWrapper, TitleTypography } from "./styles";
-import HeroModal from "./components/modal";
+import HeroModal from "./components/HeroModal";
 const axios = require("axios").default;
 
 function App() {
